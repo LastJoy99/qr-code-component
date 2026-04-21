@@ -1,69 +1,59 @@
-* {
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+}
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --slate-300: hsl(212, 45%, 89%);
+    --slate-500: hsl(216, 15%, 48%);
+    --slate-900: hsl(218, 44%, 22%);
 }
 
 body {
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    font-family: Arial, sans-serif;
-    background-color: hsl(212, 15%, 89%);
+    background-color: var(--slate-300);
+    font-family: 'Outfit', sans-serif;
+    padding: 1rem;
 }
 
-
-
-.inner-space {
-    background-color: hsl(0, 0%, 100%);
-    padding: 20px;
-    border-radius: 15px;
-    width: 300px;
+.card {
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    width: min(20rem, 90%);
     text-align: center;
+    box-shadow: o 10px 20px rgba(0, 0, 0, 0.1);
 }
 
+.qr-code-image {
+    margin-bottom: 1rem;
+}
 
-
-.qr-code-cont {
-    background-color: hsl(218, 44%, 22%);
+.qr-code-image img {
     width: 100%;
+    border-radius: 0.75rem;
 }
 
-img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-h2 {
-    margin-top: 20px;
-    font-size: 18px;
-    color: hsl(218, 44%, 22%)
+h1 {
+    font-size: 1.2rem;
+    color: var(--slate-900);
+    margin-bottom: 0.75rem;
 }
 
 p {
-    margin-top: 10px;
-    font-size: 14px;
-    color: hsl(216, 15%, 48%);
+    font-size: 0.9375rem;
+    color: var(--slate-500);
 }
 
 .attribution {
-    position: absolute;
-    bottom: 10px;
-    font-size: 12px;
-}
-
-@media (max-width: 375px) {
-  .inner-space {
-    width: 90%;
-    padding: 15px;
-  }  
-
-  h2 {
-    font-size: 16px;
-  }
-
-  p {
-    font-size: 13px;
-  }
+    margin: 1rem;
+    font-size: 0.75rem;
+    text-align: center;
 }
