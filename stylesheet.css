@@ -15,19 +15,28 @@
 
 body {
     min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--slate-300);
+    font-family: "Outfit", sans-serif;
+}
+
+main {
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--slate-300);
-    font-family: 'Outfit', sans-serif;
-    padding: 1rem;
+    flex-direction: column;
 }
 
 .card {
+    display: flex;
+    flex-direction: column;
     background-color: var(--white);
     padding: 1.5rem;
     border-radius: 1rem;
-    width: min(20rem, 90%);
+    width: fit-content;
     text-align: center;
     box-shadow: o 10px 20px rgba(0, 0, 0, 0.1);
 }
